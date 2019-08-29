@@ -1,0 +1,566 @@
+/* 
+    PEDRO HENRIQUE V CORDISTA
+    CREATIVECODE | DEVSPACE
+    27/08/2019
+    JOIAS DA MATA - CODESTACK
+*/
+
+@font-face {
+    font-family: 'Hestina Regular';
+    src: url('../fonts/Hestina.otf');
+    src: url('../fonts/Hestina.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyriadPro Bold';
+    src: url('../fonts/MyriadPro-Bold.eot');
+    src: url('../fonts/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/MyriadPro-Bold.woff') format('woff'), url('../fonts/MyriadPro-Bold.ttf') format('truetype'), url('../fonts/MyriadPro-Bold#MyriadPro-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyriadPro Regular';
+    src: url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular#MyriadPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/***********************\ GLOBAL /***********************/
+
+* {
+    max-width: 100vw !important;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+body {
+    box-sizing: border-box;
+    max-width: 100vw !important;
+    font-family: 'Quicksand';
+    font-weight: 300
+}
+
+:root {
+    --corDaPele: #f5b171;
+    --grey: #686868
+}
+
+input::placeholder {
+    padding-left: 10px;
+    font-size: .8rem;
+    font-style: italic
+}
+
+/***********************\ COLORS /***********************/
+
+.bgPele {
+    background-color: var(--corDaPele);
+}
+
+.corDaPele {
+    color: var(--corDaPele)
+}
+
+.colorGrey {
+    color: var(--grey)
+}
+
+/***********************\ FONTS /***********************/
+
+.quicksandBold {
+    font-weight: 700 !important
+}
+
+.hestina {
+    font-family: 'Hestina Regular'
+}
+
+.myriad {
+    font-family: 'MyriadPro Regular'
+}
+
+/***********************\ GLOBAL INTERNO /***********************/
+
+.startSection {
+    margin-top: 3rem
+}
+
+.section-title-img {
+    width: 20px
+}
+
+.containerEighteen {
+    width: 80% !important;
+    margin: 0 auto;
+}
+
+/***********************\ MENU /***********************/
+
+.menu {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    color: white;
+    font-weight: bold
+}
+
+.menu-left {
+    justify-content: flex-end
+}
+
+.menu-left>div, .menu-right>div {
+    margin: 0 .5rem
+}
+
+.menu-drop-btn:hover>.menu-dropdown {
+    display: block;
+    transition: .5s
+}
+
+.menu-dropdown {
+    background-color: white;
+    position: absolute;
+    color: black;
+    padding: 0 .5rem;
+    font-size: .8rem;
+    display: none;
+    transition: .5s
+}
+
+.menu-dropdown>ul {
+    margin: .3rem 0 !important
+}
+
+.menu-icon {
+    height: 25px;
+    margin-top: 3px
+}
+
+.menu-login {
+    font-size: .7rem;
+    line-height: .8rem;
+    font-weight: 300 !important
+}
+
+.menu-logo-content, .menu-right {
+    margin-left: 0px !important
+}
+
+.menu-cart-view {
+    position: absolute;
+    bottom: 2px;
+    right: -4px;
+    font-size: .75rem;
+    padding: 0px 3px;
+    border-radius: 2px;
+}
+
+.menu-btn {
+    border: 1px solid var(--corDaPele);
+    border-radius: 5px;
+    padding: .4rem .8rem;
+    font-size: .8rem
+}
+
+/***********************\ REDES SLIDER /***********************/
+
+.redes-slider {
+    position: absolute;
+    right: 7.5%;
+    top: 0;
+    height: 100vh;
+    z-index: 99999999;
+    color: white
+}
+
+.redes-slider-content {
+    display: flex;
+    flex-flow: column;
+}
+
+.redes-slider-content>a {
+    margin: .5rem 0
+}
+
+/***********************\ SLIDER /***********************/
+
+.section-slider {
+    height: 100vh;
+    width: 100%
+}
+
+.slider-title {
+    font-size: 130px;
+    line-height: 110px
+}
+
+.slider-subtitle {
+    width: 30%;
+    margin-left: 60%;
+    text-align: left
+}
+
+.pedra-main {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+
+.pedra-main>img {
+    width: 45px
+}
+
+/***********************\ CATEGORIAS /***********************/
+
+.categorias img {
+    height: 180px
+}
+
+.categorias-text-bottom {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+}
+
+.categorias-text-center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.categorias-text-bottom>div, .categorias-text-center>div>div {
+    margin-bottom: 8px;
+    line-height: 1.1rem
+}
+
+.categorias-text-bottom>div>span, .categorias-text-center>div>div>span {
+    letter-spacing: 4px;
+    font-size: .9rem;
+}
+
+.categorias-text-btn {
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: .8rem;
+    padding: 3px 2rem;
+    line-height: 21px
+}
+
+/***********************\ GRIDS /***********************/
+
+.grid-title {
+    font-size: .9rem;
+    padding: .5rem 0 .5rem;
+    border-bottom: 1px solid #efefef;
+    min-height: 56px
+}
+
+.grid-price {
+    font-size: .9rem;
+    min-height: 60px
+}
+
+.grid-value {
+    font-size: 1.5rem;
+}
+
+.grid-cta {
+    border: 1px solid var(--corDaPele);
+    text-align: center;
+    color: var(--corDaPele);
+    border-radius: 5px;
+    transition: .5s;
+    padding: 2px 0
+}
+
+.grid-cta:hover {
+    background-color: var(--corDaPele);
+    color: white
+}
+
+.grid-promotion {
+    position: absolute;
+    right: .75rem;
+    top: 0;
+    font-size: .85rem;
+    padding: 7px 5px
+}
+
+/***********************\ NOVIDADES /***********************/
+
+.novidades-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.novidades-bg img {
+    width: 100px
+}
+
+/***********************\ PARALLAX /***********************/
+
+.parallax-container {
+    color: white;
+}
+
+.bgparallax {
+    background: url('../img/parallax-overlay.png') no-repeat;
+    background-size: 100% 100%
+}
+
+.parallax-title {
+    font-size: 1.5rem;
+}
+
+.parallax-subtitle {
+    font-size: 1.8rem
+}
+
+.parallax-button {
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 5px 4rem
+}
+
+.iframe {
+    width: 90%;
+    height: 250px;
+    margin-left: 5%;
+}
+
+iframe {
+    width: 90%;
+    height: 250px;
+    z-index: 9999;
+    position: absolute;
+    border-radius: 15px;
+}
+
+#bgIframe::after {
+    content: ' ';
+    position: absolute;
+    left: 2%;
+    width: 90%;
+    border-radius: 15px;
+    bottom: -25px;
+    height: 120px;
+    background-color: var(--corDaPele);
+    z-index: 0
+}
+
+/***********************\ LANÇAMENTOS /***********************/
+
+.lancamentos-bg {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 75px);
+    height: 150px;
+}
+
+.lancamentos-bg>img {
+    height: 150px;
+}
+
+.revendedora-title {
+    letter-spacing: 1px
+}
+
+/***********************\ DEPOIMENTO /***********************/
+
+.depoimento_content {
+    z-index: 5;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    bottom: 0;
+    color: white;
+}
+
+.depoimento_title {
+    font-size: 1.2rem
+}
+
+.depoimento_img {
+    margin-top: 2rem
+}
+
+.depoimento_img>img {
+    width: 90px !important;
+}
+
+.depoimento_name {
+    font-size: 1.1rem;
+    font-family: 'Dosis';
+    font-weight: 600
+}
+
+.depoimento_text {
+    font-size: .9rem;
+    width: 90%;
+    margin-left: 5%;
+    font-family: 'MyriadPro Regular';
+}
+
+.depoimento_text::before {
+    content: "“";
+    width: 50px;
+    height: 50px;
+    color: var(--corDaPele);
+    font-size: 6rem;
+    position: absolute;
+    left: -3rem;
+    top: -3rem;
+}
+
+.depoimento_text::after {
+    content: "“";
+    width: 50px;
+    height: 50px;
+    color: var(--corDaPele);
+    font-size: 6rem;
+    position: absolute;
+    right: -3rem;
+    bottom: -2.5rem;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.deponumber {
+    font-family: 'Dosis';
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.depotext {
+    font-family: 'Dosis';
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.line {
+    margin-top: 2rem
+}
+
+/***********************\ BLOG /***********************/
+
+.blog-img-content {
+    margin-bottom: -6px !important
+}
+
+.blog-title {
+    color: #707070
+}
+
+.blog-text {
+    font-size: .65rem;
+    color: #707070
+}
+
+.blog-link {
+    font-size: .9rem;
+    color: #707070
+}
+
+.blog-content {
+    margin: 0 2%;
+    width: 46%;
+}
+
+
+/***********************\ NEWSLETTER /***********************/
+.newsletter {
+    z-index: 10
+}
+.newsletter-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 50%;
+    width: 65%;
+    color: white;
+}
+
+.newsletter-title {
+    font-family: 'Dosis';
+    font-weight: 600;
+    font-size: 1.4rem
+}
+
+.newsletter-text {
+    width: 40%
+}
+
+.newsletter-subtitle {
+    font-family: 'Dosis';
+    font-weight: 300;
+    font-size: 1.2rem
+}
+
+.newsletter-input-content {
+    margin: 0 1rem
+}
+
+.newsletter-input {
+    background-color: white !important;
+    border-radius: 15px 0 0px 15px !important;
+    margin-bottom: 0px !important;
+    box-shadow: 0px !important
+}
+
+.newsletter-button {
+    border: 2px solid white !important;
+    background-color: transparent !important;
+    height: 2.5rem;
+    padding: 0 15px;
+    border-radius: 0 15px 15px 0 !important;
+
+}
+
+/***********************\ FOOTER /***********************/
+.footer {
+    margin-top: -7rem;
+    margin-bottom: -3px;
+}
+
+.footer-box {
+    padding-top: 1rem;
+    z-index: 999
+}
+
+.footer-logo {
+    width: 60%;
+}
+
+.footer-text {
+    text-align: left;
+    font-size: .7rem;
+    margin-left: 2rem
+}
+
+.footer-links > div > a {
+    font-size: .8rem;
+}
+
+.footer-subtitle-two {
+    font-size: .7rem
+}
+
+.footer-copy {
+    font-size: .8rem
+}
